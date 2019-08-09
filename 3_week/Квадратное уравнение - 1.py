@@ -9,10 +9,12 @@ if a != 0:
     if d > 0:
         x1 = ((-b + np.sqrt(d)) / (2 * a))
         x2 = ((-b - np.sqrt(d)) / (2 * a))
-        if x2 >= x1:
-            print(round(x1, 4), round(x2, 4))
+        if x2 > x1:
+            print(round(x1, 6), round(x2, 6))
         else:
-            print(round(x2, 4), round(x1, 4))
+            print(round(x2, 6), round(x1, 6))
     elif d == 0:
         x0 = (-b / (2 * a))
         print(round(x0, 4))
+    elif d < 0:
+        print('wrong answer')
