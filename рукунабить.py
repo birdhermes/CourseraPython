@@ -1,2 +1,11 @@
-a = 0.123 *1000 % 10
-print(a)
+def rec():
+    n = int(input())
+    if n != 0:
+        if n % 2 == 0:
+            print(n)
+        rec()
+        if n % 2 != 0:
+            print(n)
+
+
+rec()
