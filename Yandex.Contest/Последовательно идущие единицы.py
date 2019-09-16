@@ -1,21 +1,14 @@
-numbers = []
+import sys
+
+numbers = sys.stdin.readline().strip()
+
 sumlen = 0
 maxlen = 0
-i = True
-
-while i:
-    i = input()
-    if i != '':
-        numbers.append(i)
-
-#def numones(numbers):
-    for n in numbers:
-        if n > 0:
-            sumlen += 1
-            maxlen = max(sumlen, maxlen)
-        else:
-            sumlen = 0
-    return(maxlen)
-#        if sumlen > maxlen:
-#           maxlen = sumlen
+for j in range(int(numbers)):
+    num = sys.stdin.readline().strip()
+    if num == '1':
+        sumlen += 1
+        maxlen = max(maxlen, sumlen)
+    else:
+        sumlen = 0
 print(maxlen)
