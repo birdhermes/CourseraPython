@@ -1,11 +1,4 @@
-def rec():
-    n = int(input())
-    if n != 0:
-        if n % 2 == 0:
-            print(n)
-        rec()
-        if n % 2 != 0:
-            print(n)
-
-
-rec()
+for i in range(1, 11):
+    for j in range(1,11):
+        print(i*j, end=' ')
+    print()
