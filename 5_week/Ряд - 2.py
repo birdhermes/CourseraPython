@@ -1,13 +1,18 @@
+# Даны два целых числа A и В. Выведите все числа от A до B включительно, в порядке возрастания,если A < B,
+# или в порядке убывания в противном случае. Формат ввода Вводятся два целых числа. Формат вывода Выведите ответ на
+# задачу.
+
+
 a = int(input())
 b = int(input())
 
 if a < b:
+    list1 = []
     list1 = list(range(a, b + 1))
-    for i in list1:
-        print(list1)
+    print(*list1, sep=' ')
 elif a > b:
-    list2 = list(range(a, b - 1, -1))
-    for i in list2:
-        print(list2)
+    list2 = []
+    list2 = (list(range(a, b - 1, -1)))
+    print(*list2, sep=' ')
 elif a == b:
     print(a)
